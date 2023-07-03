@@ -1,5 +1,5 @@
 import express from "express";
-import employeeesRoutes from './routes/employees.routes.js'
+import animesRoutes from './routes/animes.routes.js'
 import indexRoutes from './routes/index.routes.js'
 
 
@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 
 app.use(indexRoutes)
-app.use('/api',employeeesRoutes)
+app.use('/api',animesRoutes)
 
 
 app.listen(3000)
