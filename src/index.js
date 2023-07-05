@@ -11,6 +11,13 @@ app.use(indexRoutes)
 app.use('/api',animesRoutes)
 
 
+// ------------------ Not Found Error --------------------------------
+app.use((req, res, next) => {
+    res.status(404).json({
+        message: 'endpoint no fue encontrado, verifique la direccion'
+    })
+})
+
 app.listen(3000)
 console.log("Server running on port 3000")
 
