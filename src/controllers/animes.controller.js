@@ -4,7 +4,7 @@ import { pool } from '../db.js'
 export const getAnimes = async (req, res) => {
 
     try {
-        throw new Error('Probando Error') // Test error
+       // throw new Error('Probando Error') // Test error
         const [rows] = await pool.query('SELECT * FROM animes')
         res.json(rows)
 
